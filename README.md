@@ -1,4 +1,4 @@
-# VagrantConfiguration
+# Vagrant Configuration
 Vagrant machine for web dev
 
 ## Node.JS configuration
