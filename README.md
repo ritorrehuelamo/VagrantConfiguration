@@ -1,12 +1,33 @@
 # Vagrant Configuration
 Vagrant machine for web dev
 
+## Basic Vagrant configuration
+
+``` ruby
+Vagrant.configure("2") do |config|
+  
+  # Box settings
+  config.vm.box = "ubuntu/trusty64"
+
+  # Provider settings
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 2048
+    vb.cpus = 4
+  end
+
+end
+
+```
+
 ## Node.JS configuration
 
 ``` ruby
 Vagrant.configure(2) do |config|
+  # Box settings
   config.vm.box = "ubuntu/trusty64"
+  # Folder settings
   config.vm.synced_folder ".", "/var/www/project"
+  # Node.JS shell installation
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y g++
