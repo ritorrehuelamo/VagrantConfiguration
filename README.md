@@ -4,6 +4,9 @@ Vagrant machine for web dev
 ## Basic Vagrant configuration
 
 ``` ruby
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 Vagrant.configure("2") do |config|
   
   # Box settings
@@ -14,8 +17,8 @@ Vagrant.configure("2") do |config|
     vb.memory = 2048
     vb.cpus = 4
   end
-
 end
+
 
 ```
 
