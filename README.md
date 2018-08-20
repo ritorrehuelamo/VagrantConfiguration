@@ -27,6 +27,11 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   # Folder settings
   config.vm.synced_folder ".", "/var/www/project"
+  # Provider settings
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 2048
+    vb.cpus = 4
+  end
   # Node.JS shell installation
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
